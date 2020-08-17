@@ -19,3 +19,6 @@ Viewing party is an application in which users can explore movie options and cre
 - Ruby 2.5.3
 
 - Rails 5.2.4.3
+
+## Heroku
+[Heroku Link](https://peaceful-journey-75998.herokuapp.com/)
