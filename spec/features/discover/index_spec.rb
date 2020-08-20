@@ -13,6 +13,26 @@ RSpec.describe "Discover Index Page Spec" do
         click_button "Discover Movies"
       end
       expect(current_path).to eq(discover_index_path)
+      expect(page).to have_content("Discover Movies")
+    end
+
+    describe "When I visit the discover index page" do
+      before :each do
+        visit discover_index_path
+      end
+
+      it "there is a button to discover top rated movies" do
+        within ".top-rated-movies" do
+          expect(page).to have_button "Find Top Rated Movies"
+        end
+      end
+
+      it "there is a text field with a 'Find Movies' button" do
+        within ".find-movies" do
+          expect(page.has_field? "movie-title-keywords").to be_truthy
+          expect(page).to have_button "Find Movies"
+        end
+      end
     end
   end
 end
