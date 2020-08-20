@@ -1,0 +1,13 @@
+<h1>Discover Movies</h1>
+<section class="top-rated-movies">
+  <%= button_to "Find Top Rated Movies" %>
+</section>
+<br/>
+<section class="find-movies">
+  <%= form_tag do %>
+    <%= label_tag "movie-title-keywords", "Search by movie title" %><br/>
+    <%= text_field_tag "movie-title-keywords" %><br/>
+    <%= submit_tag "Find Movies" %>
+  <% end %>
+</section>
+<br/>
