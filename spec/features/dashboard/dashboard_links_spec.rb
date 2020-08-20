@@ -22,7 +22,7 @@ RSpec.describe "Dashboard Page" do
       end
     end
 
-    it "shoudl have a viewing parties section" do
+    it "should have a viewing parties section" do
       visit '/dashboard'
       within(".viewing-party") do
         expect(page).to have_content("Viewing Parties")
