@@ -10,6 +10,7 @@
 
   <body>
     <main>
+      <%= tag.h1 "Welcome #{current_user.name}!" if current_user %>
       <%= yield %>
     </main>
     <footer>
