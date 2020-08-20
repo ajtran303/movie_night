@@ -29,7 +29,7 @@ RSpec.describe "Top Rated Results Spec" do
     it "There are 40 results of Movies" do
       visit movies_path
       click_button "Find Top Rated Movies"
-      expect(current_path).to eq("/movies?q=top+rated")
+      expect(current_path).to eq("/movies")
 
       within ".results" do
         expect(page).to have_selector("article[class*=movie]", count: 40)
@@ -43,5 +43,5 @@ RSpec.describe "Top Rated Results Spec" do
   #   it "vote average rating for that movie" do
   #   end
   # end
-  
+
 end
