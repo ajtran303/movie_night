@@ -9,6 +9,7 @@ class MoviesController < ApplicationController
     url = 'https://api.themoviedb.org'
     Faraday.new(url) do |f|
       f.params['api_key'] = ENV['TMDB_API_KEY']
+      f.headers['Content-Type'] = 'application/json'
     end
   end
 
