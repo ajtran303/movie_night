@@ -12,7 +12,11 @@
 </section>
 
 <section class="results">
-  <% unless @movies.nil? %>
+  <% if @movies.nil? %>
+    <% 40.times do %>
+      <%= tag.article class: "movie" %>
+    <% end %>
+  <% else %>
     <% @movies.each do |movie| %>
     <article class="movie-<%= movie[:id] %>">
       <%= link_to "#{movie[:title]}", movie_path(movie)%>
