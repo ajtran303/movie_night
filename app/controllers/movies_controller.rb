@@ -14,11 +14,17 @@ class MoviesController < ApplicationController
   end
 
   def parse_body(response)
-    JSON.parse(response.body, symbolize_names: true)
+    JSON.parse(response.body, symbolize_names: true) if valid_json?(response.body)
+  end
+
+  def valid_json?(string)
+    !!JSON.parse(string)
+  rescue JSON::ParserError
+    false
   end
 
   def movies_results
-    proc { |json| parse_body(json)[:results] }
+    proc { |movies_response| parse_body(movies_response)[:results] }
   end
 
   def top_rated_movies
