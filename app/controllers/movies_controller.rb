@@ -36,5 +36,7 @@ class MoviesController < ApplicationController
       conn.get('/3/movie/top_rated?page=2')
     ]
     movies.sum(&movies_results)
+  rescue NoMethodError
+    nil
   end
 end
