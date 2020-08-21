@@ -4,7 +4,7 @@
 </section>
 <br/>
 <section class="find-movies">
-  <%= form_tag do %>
+  <%= form_tag movies_path, method: :get do %>
     <%= label_tag "movie-title-keywords", "Search by movie title" %><br/>
     <%= text_field_tag "movie-title-keywords" %><br/>
     <%= submit_tag "Find Movies" %>
