@@ -1,1 +1,21 @@
 <h1>Top Rated Movies</h1>
+<section class="top-rated-movies">
+  <%= button_to "Find Top Rated Movies", "/movies", :params => {:q => "top rated"}, method: :get %>
+</section>
+<br/>
+<section class="find-movies">
+  <%= form_tag do %>
+  <%= label_tag "movie-title-keywords", "Search by movie title" %>
+  <%= text_field_tag "movie-title-keywords" %>
+  <%= submit_tag "Find Movies" %>
+  <% end %>
+</section>
+
+<section class="results">
+  <% @movies.each do |movie| %>
+    <article class="movie-<%= movie[:id] %>">
+      <%= link_to "#{movie[:title]}", movie_path(movie)%>
+      <%= tag.span "Vote Average: #{movie[:vote_average].round(1)}" %>
+    </article>
+  <% end %>
+</section>
