@@ -38,10 +38,27 @@ RSpec.describe "Top Rated Results Spec" do
   end
 
   # describe "Each movie result has" do
-  #   it "the movie titles as links to that movie show page" do
+  #   before :each do
+  #     visit movies_path
+  #
+  #     # when this button is clicked,
+  #     # it will send an HTTP request to the API service
+  #     # The API service will send a response
+  #
+  #     # we should stub the http request
+  #     # and return a movies_mock object
+  #
+  #     click_button "Find Top Rated Movies"
+  #     @movies = movies_mock
   #   end
-  #   it "vote average rating for that movie" do
+  #
+  #   it "the movie title links to that movie show page and there is vote average" do
+  #     within ".results" do
+  #       @movies.each do |movie|
+  #         expect(page).to have_link(movie.name, href: movie_path(movie))
+  #         expect(page).to content("Vote Average: #{movie.vote_average}")
+  #       end
+  #     end
   #   end
   # end
-
 end
