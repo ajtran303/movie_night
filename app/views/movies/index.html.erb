@@ -11,13 +11,13 @@
   <% end %>
 </section>
 
-<% unless @movies.nil? %>
-  <section class="results">
+<section class="results">
+  <% unless @movies.nil? %>
     <% @movies.each do |movie| %>
     <article class="movie-<%= movie[:id] %>">
       <%= link_to "#{movie[:title]}", movie_path(movie)%>
       <%= tag.span "Vote Average: #{movie[:vote_average].round(1)}" %>
     </article>
     <% end %>
-  </section>
-<% end %>
+  <% end %>
+</section>
