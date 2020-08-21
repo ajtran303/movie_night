@@ -16,9 +16,15 @@ class MoviesController < ApplicationController
     JSON.parse(response.body, symbolize_names: true)
   end
 
+  def movies_results
+    proc { |json| parse_body(json)[:results] }
+  end
+
   def top_rated_movies
-    response1 = conn.get('/3/movie/top_rated?page=1')
-    response2 = conn.get('/3/movie/top_rated?page=2')
-    parse_body(response1)[:results] + parse_body(response2)[:results]
+    movies = [
+      conn.get('/3/movie/top_rated?page=1'),
+      conn.get('/3/movie/top_rated?page=2')
+    ]
+    movies.sum(&movies_results)
   end
 end
