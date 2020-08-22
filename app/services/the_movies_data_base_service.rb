@@ -9,7 +9,7 @@ class TheMoviesDataBaseService
     nil
   end
 
-  def find_movies(keyword)
+  def find_movies_by_title(keyword)
     movies = [
       conn.get("/3/search/movie?page=1&query=#{keyword}"),
       conn.get("/3/search/movie?page=2&query=#{keyword}")
