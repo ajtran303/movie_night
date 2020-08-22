@@ -5,7 +5,7 @@
 </section><br/>
 
 <section class="find-movies">
-  <%= form_tag do %>
+  <%= form_tag movies_path, method: :get do %>
     <%= label_tag "movie-title-keywords", "Search by movie title" %>
     <%= text_field_tag "movie-title-keywords" %>
     <%= submit_tag "Find Movies" %>
@@ -19,9 +19,9 @@
     <% end %>
   <% else %>
     <% @movies.each do |movie| %>
-      <article class="movie-<%= movie[:id] %>">
-        <%= link_to "#{movie[:title]}", movie_path(movie)%>
-        <%= tag.span "Vote Average: #{movie[:vote_average].round(1)}" %>
+      <article class="movie-<%= movie.tmdb_id %>">
+        <%= link_to "#{movie.title}", movie_path(movie)%>
+        <%= tag.span "Vote Average: #{movie.vote_average.round(1)}" %>
       </article>
     <% end %>
   <% end %>
