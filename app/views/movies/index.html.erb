@@ -13,10 +13,12 @@
 </section>
 
 <section class="results">
-  <% @movies.each do |movie| %>
-    <article class="movie-<%= movie.tmdb_id %>">
-      <%= link_to "#{movie.title}", movie_path(movie)%>
-      <%= tag.span "Vote Average: #{movie.vote_average.round(1)}" %>
-    </article>
+  <% unless @movies.nil? %>
+    <% @movies.each do |movie| %>
+      <article class="movie-<%= movie.tmdb_id %>">
+        <%= link_to "#{movie.title}", movie_path(movie)%>
+        <%= tag.span "Vote Average: #{movie.vote_average.round(1)}" %>
+      </article>
+    <% end %>
   <% end %>
 </section>
