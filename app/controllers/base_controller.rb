@@ -1,11 +1,9 @@
 class BaseController < ApplicationController
-
   before_action :require_user
 
   private
+
   def require_user
-    if current_user.nil?
-      render file: "/public/404"
-    end
+    render file: '/public/404' if current_user.nil?
   end
 end
