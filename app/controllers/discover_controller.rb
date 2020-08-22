@@ -1,3 +1,3 @@
-class DiscoverController < ApplicationController
+class DiscoverController < BaseController
   def index; end
 end
