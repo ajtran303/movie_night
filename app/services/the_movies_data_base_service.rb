@@ -29,7 +29,10 @@ class TheMoviesDataBaseService
   end
 
   def parse_body(response)
-    JSON.parse(response.body, symbolize_names: true) if valid_json?(response.body)
+    # JSON.parse(response.body, symbolize_names: true) if valid_json?(response.body)
+    # This guard clause initializes the exception handling routine
+    # If the Continious Integration checks pass, then we can delete the whole routine.
+    JSON.parse(response.body, symbolize_names: true)
   end
 
   def movies_results
