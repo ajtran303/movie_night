@@ -5,8 +5,6 @@ class TheMoviesDataBaseService
       conn.get('/3/movie/top_rated?page=2')
     ]
     movies.sum(&movies_results)
-  rescue NoMethodError
-    nil
   end
 
   def find_movies_by_title(keyword)
@@ -15,8 +13,6 @@ class TheMoviesDataBaseService
       conn.get("/3/search/movie?page=2&query=#{keyword}")
     ]
     movies.sum(&movies_results)
-  rescue NoMethodError
-    nil
   end
 
   private
@@ -29,22 +25,13 @@ class TheMoviesDataBaseService
   end
 
   def parse_body(response)
-    # JSON.parse(response.body, symbolize_names: true) if valid_json?(response.body)
-    # This guard clause initializes the exception handling routine
-    # If the Continious Integration checks pass, then we can delete the whole routine.
     JSON.parse(response.body, symbolize_names: true)
   end
 
   def movies_results
     proc do |movies_response|
       movies = parse_body(movies_response)
-      movies[:results] unless movies.nil?
+      movies[:results]
     end
-  end
-
-  def valid_json?(string)
-    JSON.parse(string)
-  rescue JSON::ParserError
-    false
   end
 end
