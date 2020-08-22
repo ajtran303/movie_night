@@ -9,7 +9,7 @@ RSpec.describe "Discover Movies Page" do
 
     it "can search for movies using a keyword" do
       visit discover_index_path
-      fill_in "movie-title-keywords", with: "Avengers"
+      fill_in :movie_title_keywords, with: "Avengers"
       click_on "Find Movies"
       expect(current_path).to eq("/movies")
       within(".results") do

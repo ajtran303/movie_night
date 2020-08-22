@@ -19,7 +19,7 @@ RSpec.describe "Top Rated Results Spec" do
 
     it "a text field with a 'Find Movies' button" do
       within ".find-movies" do
-        expect(page.has_field? "movie-title-keywords").to be_truthy
+        expect(page.has_field? :movie_title_keywords ).to be_truthy
         expect(page).to have_button "Find Movies"
       end
     end
