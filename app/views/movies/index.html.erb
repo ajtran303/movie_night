@@ -15,8 +15,8 @@
 <section class="results">
   <% unless @movies.nil? %>
     <% @movies.each do |movie| %>
-      <article class="movie-<%= movie.tmdb_id %>">
-        <%= link_to "#{movie.title}", movie_path(movie)%>
+      <article id="movie-<%= movie.tmdb_id %>" class="movie">
+        <%= link_to "#{movie.title}", movie_path(movie.tmdb_id)%>
         <%= tag.span "Vote Average: #{movie.vote_average.round(1)}" %>
       </article>
     <% end %>
