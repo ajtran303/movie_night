@@ -5,7 +5,7 @@ class FriendshipsController < ApplicationController
       Friendship.create_reciprocal_for_ids(current_user.id, friend.id)
       flash[:success] = "You are now friends with #{friend.name}"
     else
-      flash[:failure] = "Email does not exist, please try another one"
+      flash[:failure] = 'Email does not exist, please try another one'
     end
     redirect_to dashboard_index_path
   end

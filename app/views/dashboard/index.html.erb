@@ -8,7 +8,6 @@
     <%= tag.p friend.name %>
   <% end %>
 
-
   <%= tag.p "You currently have no friends" if current_user.friends.empty? %>
 
   <%= form_tag "/friendships", method: :post do %>
