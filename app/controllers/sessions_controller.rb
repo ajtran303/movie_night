@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
     user.email = auth_hash[:info][:email]
     user.save
 
-    session[:user_id] = user.id 
+    session[:user_id] = user.id
     redirect_to dashboard_index_path
   end
 end
