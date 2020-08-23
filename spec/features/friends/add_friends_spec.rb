@@ -18,6 +18,7 @@ RSpec.describe "User Dashboard Page" do
       Friendship.create_reciprocal_for_ids(@user_1.id, @user_2.id)
       visit dashboard_index_path
       within(".friends") do
+        expect(page).to_not have_content("You currently have no friends")
         expect(page).to have_content("Friends")
         expect(page).to have_content(@user_2.name)
       end
@@ -36,6 +37,7 @@ RSpec.describe "User Dashboard Page" do
     #   expect(current_path).to eq(dashboard_index_path)
     #   expect(page).to have_content("You are now friends with #{@user_2.name}")
     #   within(".friends") do
+    #     expect(page).to_not have_content("You currently have no friends")
     #     expect(page).to have_content(@user_2.name)
     #     expect(page).to_not have_content(@user_3.name)
     #   end
