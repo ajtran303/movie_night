@@ -3,7 +3,7 @@ class Friendship < ApplicationRecord
   validates :friend_id, uniqueness: true, presence: true
 
   belongs_to :user
-  belongs_to :friend, class_name: 'User', foreign_key: :friend_id
+  belongs_to :friend, class_name: 'User'
 
   def self.create_reciprocal_for_ids(user_id, friend_id)
     user_friendship = Friendship.create(user_id: user_id, friend_id: friend_id)
