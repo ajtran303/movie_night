@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.describe "Movie title links" do
+RSpec.describe "Movie title links", :vcr do
   describe "As an authenticated user" do
     before :each do
       @user = User.create!(user_id: "100000000000000000000", name: "John Smith")
