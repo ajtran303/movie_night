@@ -3,8 +3,7 @@ class Movie
               :title,
               :vote_average,
               :runtime,
-              :description,
-              :reviews_count
+              :description
 
   def initialize(movie_params)
     @movie_params = movie_params
@@ -13,7 +12,6 @@ class Movie
     @vote_average = movie_params[:vote_average]
     @runtime = movie_params[:runtime]
     @description = movie_params[:overview]
-    @reviews_count = movie_params[:reviews][:total_results]
   end
 
   def genres
@@ -30,6 +28,10 @@ class Movie
       }
       CastMember.new(cast_member_params)
     end
+  end
+
+  def reviews_count
+    @movie_params[:reviews][:total_results]
   end
 
   def reviews
