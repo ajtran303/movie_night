@@ -5,7 +5,7 @@ class Movie
               :runtime,
               :genres,
               :description,
-              :cast_members, #array of [member_1, member_2]
+              :cast_members,
               :reviews_count,
               :reviews
 
@@ -15,26 +15,40 @@ class Movie
     @vote_average = movie_params[:vote_average]
     @runtime = movie_params[:runtime]
     @description = movie_params[:overview]
-    unless movie_params[:genres].nil?
-      @genres = movie_params[:genres].map do |genre|
-        genre[:name]
-      end
-      @cast_members = movie_params[:credits][:cast][0..9].map do |member|
-        cast_member_params = {
-          name: member[:name],
-          character: member[:character]
-        }
-        CastMember.new(cast_member_params)
-      end
-      @reviews_count = movie_params[:reviews][:total_results]
-      @reviews = movie_params[:reviews][:results].map do |review|
-        review_params = {
-          author: review[:author],
-          content: review[:content]
-        }
-        Review.new(review_params)
-      end
+    get_details(movie_params) unless movie_params[:genres].nil?
+  end
+
+  def get_genre(movie_params)
+    @genres = movie_params[:genres].map do |genre|
+      genre[:name]
     end
+  end
+
+  def get_cast_members(movie_params)
+    @cast_members = movie_params[:credits][:cast][0..9].map do |member|
+      cast_member_params = {
+        name: member[:name],
+        character: member[:character]
+      }
+      CastMember.new(cast_member_params)
+    end
+  end
+
+  def get_reviews(movie_params)
+    @reviews_count = movie_params[:reviews][:total_results]
+    @reviews = movie_params[:reviews][:results].map do |review|
+      review_params = {
+        author: review[:author],
+        content: review[:content]
+      }
+      Review.new(review_params)
+    end
+  end
+
+  def get_details(movie_params)
+    get_genre(movie_params)
+    get_cast_members(movie_params)
+    get_reviews(movie_params)
   end
 end
 
