@@ -37,28 +37,24 @@ RSpec.describe "Top Rated Results Spec", :vcr do
     end
   end
 
-  # describe "Each movie result has" do
-  #   before :each do
-  #     visit movies_path
-  #
-  #     # when this button is clicked,
-  #     # it will send an HTTP request to the API service
-  #     # The API service will send a response
-  #
-  #     # we should stub the http request
-  #     # and return a movies_mock object
-  #
-  #     click_button "Find Top Rated Movies"
-  #     @movies = movies_mock
-  #   end
-  #
-  #   it "the movie title links to that movie show page and there is vote average" do
-  #     within ".results" do
-  #       @movies.each do |movie|
-  #         expect(page).to have_link(movie.name, href: movie_path(movie))
-  #         expect(page).to content("Vote Average: #{movie.vote_average}")
-  #       end
-  #     end
-  #   end
-  # end
+  describe "Each movie result has", :vcr do
+    it "the movie title links to that movie show page and there is vote average" do
+      visit movies_path
+      click_button "Find Top Rated Movies"
+      cassette = 'spec/fixtures/vcr_cassettes/Top_Rated_Results_Spec/Each_movie_result_has/the_movie_title_links_to_that_movie_show_page_and_there_is_vote_average.yml'
+      fixture = File.read(cassette)
+      yaml = YAML.load(fixture, symbolize_names: true)
+      yaml_data = yaml[:http_interactions][1][:response][:body][:string]
+      json = JSON.parse(yaml_data, symbolize_names: true)
+      movies = json[:results].map do |data|
+        Movie.new(data)
+      end
+      movies.each do |movie|
+        within(".results") do
+          expect(page).to have_link(movie.title, href: "/movies/#{movie.tmdb_id}")
+          expect(page).to have_content("Vote Average: #{movie.vote_average}")
+        end
+      end
+    end
+  end
 end
