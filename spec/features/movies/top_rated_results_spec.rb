@@ -39,8 +39,10 @@ RSpec.describe "Top Rated Results Spec", :vcr do
 
   describe "Each movie result has", :vcr do
     it "the movie title links to that movie show page and there is vote average" do
+      
       visit movies_path
       click_button "Find Top Rated Movies"
+
       cassette = 'spec/fixtures/vcr_cassettes/Top_Rated_Results_Spec/Each_movie_result_has/the_movie_title_links_to_that_movie_show_page_and_there_is_vote_average.yml'
       fixture = File.read(cassette)
       yaml = YAML.load(fixture, symbolize_names: true)
@@ -49,6 +51,7 @@ RSpec.describe "Top Rated Results Spec", :vcr do
       movies = json[:results].map do |data|
         Movie.new(data)
       end
+
       movies.each do |movie|
         within(".results") do
           expect(page).to have_link(movie.title, href: "/movies/#{movie.tmdb_id}")
