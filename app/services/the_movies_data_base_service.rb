@@ -15,6 +15,11 @@ class TheMoviesDataBaseService
     movies.sum(&movies_results)
   end
 
+  def movie_details(movie_id)
+    movie = conn.get "/3/movie/#{movie_id}?&append_to_response=credits,reviews"
+    parse_body(movie)
+  end
+
   private
 
   def conn

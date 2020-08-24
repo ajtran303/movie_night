@@ -20,6 +20,11 @@ class SearchResults
     end
   end
 
+  def self.movie_details(movie_id)
+    movie_data = service_movie_data.movie_details(movie_id)
+    Movie.new(movie_data)
+  end
+
   def self.service_movie_data
     TheMoviesDataBaseService.new
   end
