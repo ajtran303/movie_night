@@ -11,6 +11,9 @@
   <body>
     <main>
       <%= tag.h1 "Welcome #{current_user.name}!" if current_user %>
+      <% flash.each do |type, message| %>
+        <%= tag.div message %>
+      <% end %>
       <%= yield %>
     </main>
     <footer>
