@@ -25,7 +25,7 @@ RSpec.describe "Create Viewing Party Spec" do
       end
     end
 
-    it "There is a form to create a viewing party" do
+    it "There is a form to create a viewing party", :vcr do
       visit("/movies/#{@movie.tmdb_id}")
       click_button "Create A Viewing Party"
 
