@@ -1,0 +1,31 @@
+<article class="movie-details">
+  <header>
+    <%= tag.h1 @movie.title %>
+  </header>
+
+  <main>
+    <ul>
+      <%= tag.li "Vote Average: #{@movie.vote_average}" %>
+      <%= tag.li "Runtime: #{@movie.runtime} min" %>
+      <%= tag.li "Genre(s): #{@movie.genres.join(', ')}" %>
+    </ul>
+    <h2>Summary</h2>
+    <%= tag.p @movie.description %>
+    <h2>Cast</h2>
+    <ul>
+      <% @movie.cast_members.each do |member| %>
+        <%= tag.li "#{member.actor} as #{member.character}" %>
+      <% end %>
+    </ul>
+  </main>
+</article>
+
+<section class="movie-reviews">
+  <h2><%= @movie.reviews_count %> Reviews</h2>
+  <% @movie.reviews.each do |review| %>
+    <article class="review">
+      <%= tag.h4 "Author: #{review.author}" %>
+      <%= tag.p review.content %>
+    </article>
+    <% end %>
+</section>
