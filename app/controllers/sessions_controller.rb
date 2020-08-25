@@ -6,6 +6,8 @@ class SessionsController < ApplicationController
     user.name = auth_hash[:info][:name]
     user.oauth_id = auth_hash[:uid]
     user.email = auth_hash[:info][:email]
+    user.access_token = auth_hash[:credentials][:token]
+    user.refresh_token = auth_hash[:credentials][:refresh_token]
     user.save
 
     session[:user_id] = user.id
