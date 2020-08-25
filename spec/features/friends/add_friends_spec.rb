@@ -42,7 +42,7 @@ RSpec.describe "User Dashboard Page" do
         expect(page).to_not have_content(@user_3.name)
       end
     end
-    
+
     scenario "I cannot add a friend by their email address if they're not a registered user in the system" do
       visit dashboard_index_path
       within(".friends") do
@@ -51,6 +51,16 @@ RSpec.describe "User Dashboard Page" do
       end
       expect(current_path).to eq(dashboard_index_path)
       expect(page).to have_content("Email does not exist, please try another one")
+    end
+
+    scenario "Users cannot add themselves as friends" do
+      visit dashboard_index_path
+      within(".friends") do
+        fill_in :friends_email, with: "john@example.com"
+        click_on "Add Friend"
+      end
+      expect(current_path).to eq(dashboard_index_path)
+      expect(page).to have_content("You cannot add yourself as a friend")
     end
   end
 end
