@@ -5,7 +5,7 @@ RSpec.describe Movie do
     cassette = 'spec/fixtures/vcr_cassettes/Movie_Show_Page/As_an_authenticated_user/I_can_see_movie_details.yml'
     movie_details = File.read(cassette)
     yaml = YAML.load(movie_details, symbolize_names: true)
-    json = yaml[:http_interactions][2][:response][:body][:string]
+    json = yaml[:http_interactions][0][:response][:body][:string]
     movie_params = JSON.parse(json, symbolize_names: true)
     movie = Movie.new(movie_params)
 
