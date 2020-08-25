@@ -3,8 +3,8 @@ require "rails_helper"
 RSpec.describe "Movie Show Page" do
   describe "As an authenticated user" do
     it "I can see movie details", :vcr do
-      @user = User.create!(user_id: "100000000000000000000", name: "John Smith")
-      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
+      user = User.create!(oauth_id: "100000000000000000000", name: "John Smith", email: "john@example.com")
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
       cassette = 'spec/fixtures/vcr_cassettes/Movie_Show_Page/As_an_authenticated_user/I_can_see_movie_details.yml'
       movie_details = File.read(cassette)
