@@ -9,6 +9,8 @@
       <%= tag.li "Runtime: #{@movie.runtime} min" %>
       <%= tag.li "Genre(s): #{@movie.genres.join(', ')}" %>
     </ul>
+    <%= button_to "Create A Viewing Party", new_viewing_party_path, method: :get %>
+
     <h2>Summary</h2>
     <%= tag.p @movie.description %>
     <h2>Cast</h2>
