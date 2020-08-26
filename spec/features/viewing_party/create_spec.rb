@@ -38,7 +38,19 @@ RSpec.describe "Create Viewing Party Spec", :vcr, :new_episodes => true do
       end
     end
 
-    # scenario "There is a form to create a viewing party" do
-    # end
+    scenario "There is a form to create a viewing party" do
+      expect(Party.all.size).to eq(0)
+
+      within ".new-viewing-party-form" do
+        expect(page).to have_content(@movie.title)
+        expect(find_field(:party_duration).value).to eq("#{@movie.runtime}")
+        page.find(:xpath, '//input[@id="date"]').set(DateTime.now.to_date.to_s)
+        page.find(:xpath, '//input[@id="time"]').set(DateTime.now.to_time.to_s[11..15])
+        check "Jane Doe"
+        click_on "Create Party"
+      end
+
+      expect(Party.all.size).to eq(1)
+    end
   end
 end
