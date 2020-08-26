@@ -1,0 +1,110 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/search/movie?api_key=SECRET_TMDB_API_KEY&page=1&query=Buffy
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Wed, 26 Aug 2020 22:38:29 GMT
+      Server:
+      - openresty
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, PUT, DELETE, OPTIONS
+      Access-Control-Expose-Headers:
+      - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
+        Content-Length, Content-Range
+      Cache-Control:
+      - public, max-age=120
+      Vary:
+      - Accept-Encoding
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 9c7e5857d78c5dc89042979317de5843.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - DEN50-C2
+      X-Amz-Cf-Id:
+      - pqlLh5R2G5nWtRE7XX8n_3l45bFniLFmMMDeBO8r9Q7pTdXZjdB5xw==
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJwYWdlIjoxLCJ0b3RhbF9yZXN1bHRzIjo2LCJ0b3RhbF9wYWdlcyI6MSwicmVzdWx0cyI6W3sicG9wdWxhcml0eSI6MTAuNzg0LCJ2b3RlX2NvdW50Ijo0NjIsInZpZGVvIjpmYWxzZSwicG9zdGVyX3BhdGgiOiJcL3NvNHRUTUl0b3E5MHdwaHMxOGxXYlYwQVNWVi5qcGciLCJpZCI6MTAyMDYsImFkdWx0IjpmYWxzZSwiYmFja2Ryb3BfcGF0aCI6IlwvdjlCTndDU202N3A5ME8yQmJ1a2NzakRjbFA5LmpwZyIsIm9yaWdpbmFsX2xhbmd1YWdlIjoiZW4iLCJvcmlnaW5hbF90aXRsZSI6IkJ1ZmZ5IHRoZSBWYW1waXJlIFNsYXllciIsImdlbnJlX2lkcyI6WzI4LDM1LDI3XSwidGl0bGUiOiJCdWZmeSB0aGUgVmFtcGlyZSBTbGF5ZXIiLCJ2b3RlX2F2ZXJhZ2UiOjUuNSwib3ZlcnZpZXciOiJCbG9uZGUsIGJvdW5jeSBCdWZmeSBpcyB5b3VyIHR5cGljYWwgaGlnaCBzY2hvb2wgY2hlZXJsZWFkZXI6IGhlciBnb2FsIGlzIHRvIFwibWFycnkgQ2hyaXN0aWFuIFNsYXRlciBhbmQgZGllLFwiIGFuZCBub3RoaW5nIGdldHMgaW4gaGVyIHdheSB3aGVuIGl0J3MgdGltZSB0byBzaG9wISBCdXQgYWxsIHRoYXQgY2hhbmdlcyB3aGVuIGEgc3RyYW5nZSBtYW4gaW5mb3JtcyBoZXIgc2hlJ3MgYmVlbiBjaG9zZW4gYnkgZmF0ZSB0byBraWxsIHZhbXBpcmVzLiAgV2l0aCB0aGUgaGVscCBvZiBhIHJvbWFudGljIHJlYmVsLCBCdWZmeSBpcyBzb29uIHNwZW5kaW5nIHNjaG9vbCBuaWdodHMgcHJvdGVjdGluZyBMLkEuIGZyb20gTG90aG9zIHRoZSBWYW1waXJlIEtpbmcsIGhpcyBzaWRla2ljaywgTGVmdHksIGFuZCB0aGVpciBkZXRlcm1pbmVkIGdhbmcgb2YgYmxvb2RzdWNrZXJzLiBJdCdzIGV2ZXJ5dGhpbmcgeW91J2QgZXhwZWN0IGZyb20gYSB0ZWVuIHF1ZWVuIGluIHRoZSBWYWxsZXkuIiwicmVsZWFzZV9kYXRlIjoiMTk5Mi0wNy0yNCJ9LHsicG9wdWxhcml0eSI6MC42LCJ2b3RlX2NvdW50IjowLCJ2aWRlbyI6ZmFsc2UsInBvc3Rlcl9wYXRoIjoiXC8zVGFRNFRYQnpRNWtoYlFIZzcwTEd1VkZmSlMuanBnIiwiaWQiOjY4ODAwOCwiYWR1bHQiOmZhbHNlLCJiYWNrZHJvcF9wYXRoIjpudWxsLCJvcmlnaW5hbF9sYW5ndWFnZSI6ImVuIiwib3JpZ2luYWxfdGl0bGUiOiJCdWZmeSBTYWludGUtTWFyaWU6IEEgTXVsdGltZWRpYSBMaWZlIiwiZ2VucmVfaWRzIjpbOTksMTA0MDJdLCJ0aXRsZSI6IkJ1ZmZ5IFNhaW50ZS1NYXJpZTogQSBNdWx0aW1lZGlhIExpZmUiLCJ2b3RlX2F2ZXJhZ2UiOjAsIm92ZXJ2aWV3IjoiQnVmZnkgU2FpbnRlLU1hcmllIGlzIGJlc3Qga25vd24gZm9yIGhlciBwcm90ZXN0IHNvbmdzIChVbml2ZXJzYWwgU29sZGllcikgYW5kIGhlciBsb3ZlIHNvbmdzIChVcCBXaGVyZSBXZSBCZWxvbmcpLiBUaGlzIG9uZS1ob3VyIGRvY3VtZW50YXJ5IGNocm9uaWNsZXMgaGVyIHJlbWFya2FibGUgY2FyZWVyIGFzIHNoZSByaXNlcyB0byBwcm9taW5lbmNlIGluIHRoZSAxOTYwcyBHcmVlbndpY2ggVmlsbGFnZSBmb2xrIG11c2ljIHNjZW5lIGFuZCBibGF6ZXMgYSBncm91bmRicmVha2luZyBwYXRoIGFzIGFuIEFib3JpZ2luYWwtcmlnaHRzIGFkdm9jYXRlLCBkaWdpdGFsIGFydGlzdCBhbmQgT3NjYXItd2lubmluZyBzb25nd3JpdGVyLiIsInJlbGVhc2VfZGF0ZSI6IjIwMDYtMTEtMDEifSx7InBvcHVsYXJpdHkiOjAuNiwiaWQiOjMxMDAwMCwidmlkZW8iOnRydWUsInZvdGVfY291bnQiOjAsInZvdGVfYXZlcmFnZSI6MCwidGl0bGUiOiJCdWZmeSBTYWludGUtTWFyaWU6IFVwIFdoZXJlIFdlIEJlbG9uZyIsInJlbGVhc2VfZGF0ZSI6IjE5OTYtMDEtMDEiLCJvcmlnaW5hbF9sYW5ndWFnZSI6ImVuIiwib3JpZ2luYWxfdGl0bGUiOiJCdWZmeSBTYWludGUtTWFyaWU6IFVwIFdoZXJlIFdlIEJlbG9uZyIsImdlbnJlX2lkcyI6W10sImJhY2tkcm9wX3BhdGgiOm51bGwsImFkdWx0IjpmYWxzZSwib3ZlcnZpZXciOiJOYXRpdmUgQW1lcmljYW4gc2luZ2VyLXNvbmd3cml0ZXIgQnVmZnkgU2FpbnRlLU1hcmllIC0tIHdobyBzY29yZWQgYSBCZXN0IE9yaWdpbmFsIFNvbmcgT3NjYXIgZm9yIHRoZSB0aXRsZSB0cmFjayBpbiAxOTgzIC0tIHBlcmZvcm1zIGFsb25nIHdpdGggUmVkIEJ1bGwgYW5kIFN0b25leSBQYXJrLCB0d28gd29ybGQtY2hhbXBpb24gcG93d293IHNpbmdpbmcgZ3JvdXBzIGZyb20gQWxiZXJ0YSwgQ2FuYWRhLiBUdW5lcyBpbmNsdWRlIFwiVXAgV2hlcmUgV2UgQmVsb25nLFwiIFwiQ3JpcHBsZSBDcmVlayxcIiBcIkJ1cnkgTXkgSGVhcnQgYXQgV291bmRlZCBLbmVlLFwiIFwiSW5kaWFuIENvd2JveSBpbiB0aGUgUm9kZW8sXCIgXCJEYXJsaW5nIERvbid0IENyeSxcIiBcIlBpbmV5IFdvb2QgSGlsbHNcIiBhbmQgXCJVbnRpbCBJdCdzIFRpbWUgZm9yIFlvdSB0byBHby5cIiIsInBvc3Rlcl9wYXRoIjpudWxsfSx7InBvcHVsYXJpdHkiOjAuNjcyLCJ2b3RlX2NvdW50IjoyLCJ2aWRlbyI6ZmFsc2UsInBvc3Rlcl9wYXRoIjpudWxsLCJpZCI6NDUwMTkxLCJhZHVsdCI6ZmFsc2UsImJhY2tkcm9wX3BhdGgiOm51bGwsIm9yaWdpbmFsX2xhbmd1YWdlIjoiZW4iLCJvcmlnaW5hbF90aXRsZSI6IkJ1ZmZ5IFRoZSBWYW1waXJlIFNsYXllcjogVGhlIEFuaW1hdGVkIFNlcmllcyIsImdlbnJlX2lkcyI6WzI4LDE2LDE0XSwidGl0bGUiOiJCdWZmeSBUaGUgVmFtcGlyZSBTbGF5ZXI6IFRoZSBBbmltYXRlZCBTZXJpZXMiLCJ2b3RlX2F2ZXJhZ2UiOjcuNSwib3ZlcnZpZXciOiJJbiB0aGlzIHVuLWFpcmVkIHBpbG90IGZvciB0aGUgYW5pbWF0ZWQgXCJCdWZmeSB0aGUgVmFtcGlyZSBTbGF5ZXJcIiBzZXJpZXMgdGhhdCB3YXMgbmV2ZXIgcGlja2VkIHVwIGJ5IGEgbmV0d29yaywgQnVmZnkgaXMgYXR0YWNrZWQgYnkgYSB2YW1waXJlIGluIGFuIGFsbGV5LiBMYXRlciwgR2lsZXMgaW5mb3JtcyBCdWZmeSwgWGFuZGVyLCBhbmQgV2lsbG93IHRoYXQgdGhleSB3aWxsIGhhdmUgdG8gbWlzcyB0aGUgcGFydHkgdGhleSB3ZXJlIHBsYW5uaW5nIG9uIGF0dGVuZGluZyBiZWNhdXNlIHRoZSBmb2xsb3dlcnMgb2YgYSBiZWluZyBuYW1lZCBNb3JnYWxhIGFyZSBwbGFubmluZyBhbiBhcG9jYWx5cHNlLiBBbHNvLCBCdWZmeSBpcyBhdHRhY2tlZCBieSBhIGRyYWdvbi4iLCJyZWxlYXNlX2RhdGUiOiIyMDA0LTA0LTAyIn0seyJwb3B1bGFyaXR5IjozLjE5OSwiaWQiOjEwNzY2MiwidmlkZW8iOmZhbHNlLCJ2b3RlX2NvdW50IjoyNCwidm90ZV9hdmVyYWdlIjo2LjgsInRpdGxlIjoiRnVubnkgTGl0dGxlIEJ1bm5pZXMiLCJyZWxlYXNlX2RhdGUiOiIxOTM0LTAzLTI0Iiwib3JpZ2luYWxfbGFuZ3VhZ2UiOiJlbiIsIm9yaWdpbmFsX3RpdGxlIjoiRnVubnkgTGl0dGxlIEJ1bm5pZXMiLCJnZW5yZV9pZHMiOlsxNl0sImJhY2tkcm9wX3BhdGgiOm51bGwsImFkdWx0IjpmYWxzZSwib3ZlcnZpZXciOiJXZSBzZWUgYnVubnkgcmFiYml0cyBwcmVwYXJpbmcgZm9yIEVhc3RlciwgYnkgbWFraW5nIGNob2NvbGF0ZSBlZ2dzIGFuZCByYWJiaXRzLCBkZWNvcmF0aW5nIGVnZ3MsIGFuZCB3ZWF2aW5nIGFuZCBmaWxsaW5nIGJhc2tldHMuIiwicG9zdGVyX3BhdGgiOiJcLzlmb0RZcHk2dGRSdm13QUZWa1U3SnZFRWxJTS5qcGcifSx7InBvcHVsYXJpdHkiOjAuNiwidm90ZV9jb3VudCI6NSwidmlkZW8iOmZhbHNlLCJwb3N0ZXJfcGF0aCI6IlwvaGtVaHlocGNQNWFBODg4ZFRWbWhPMmlQY3l5LmpwZyIsImlkIjo0OTM5MTMsImFkdWx0IjpmYWxzZSwiYmFja2Ryb3BfcGF0aCI6IlwvbTNXaEZwTHdzRUI1MlczbG1BZWIxeDN4MlJXLmpwZyIsIm9yaWdpbmFsX2xhbmd1YWdlIjoic3YiLCJvcmlnaW5hbF90aXRsZSI6IkdvcmRvbiAmIFBhZGR5IiwiZ2VucmVfaWRzIjpbMTYsMTRdLCJ0aXRsZSI6IkdvcmRvbiAmIFBhZGR5Iiwidm90ZV9hdmVyYWdlIjo2LjYsIm92ZXJ2aWV3IjoiVGhlIGZvcmVzdOKAmXMgcG9saWNlIGNoaWVmIEdvcmRvbiBpcyBhYm91dCB0byByZXRpcmUgYW5kIGhlIG5lZWRzIHRvIGZpbmQgYSBuZXcgYXNzaXN0YW50LiBQYWRkeSwgYSBjbGV2ZXIgbW91c2Ugd2l0aCBhIGdyZWF0IHNlbnNlIG9mIHNtZWxsIHNlZW1zIHRvIGJlIHRoZSByaWdodCBjYW5kaWRhdGUuIFRvZ2V0aGVyIHRoZXkgaGF2ZSB0byBzb2x2ZSBHb3Jkb27igJlzIGxhc3QgY2FzZSDigJMgdGhlIG15c3Rlcnkgb2Ygc3F1aXJyZWzigJlzIG1pc3NpbmcgbnV0cy4gQ291bGQgaXQgYmUgdGhlIGZveCB0aGF0IHRvb2sgdGhlbT8gR29yZG9uIGFuZCBQYWRkeSB3aWxsIHNvb24gZmluZCBvdXQuIiwicmVsZWFzZV9kYXRlIjoiMjAxNy0xMi0yMiJ9XX0=
+  recorded_at: Wed, 26 Aug 2020 22:38:29 GMT
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/search/movie?api_key=SECRET_TMDB_API_KEY&page=2&query=Buffy
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '57'
+      Connection:
+      - keep-alive
+      Server:
+      - openresty
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, PUT, DELETE, OPTIONS
+      Access-Control-Expose-Headers:
+      - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
+        Content-Length, Content-Range
+      Date:
+      - Wed, 26 Aug 2020 22:38:29 GMT
+      Etag:
+      - 2e7c726a05acc00daba2490ed025708c
+      Cache-Control:
+      - public, max-age=120
+      X-Cache:
+      - RefreshHit from cloudfront
+      Via:
+      - 1.1 23d87d8c2ce38e34462e6c134d187eeb.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - DEN50-C2
+      X-Amz-Cf-Id:
+      - YBYaPokq0DGk8djSUu-qKZWXBz0zHG5RtgZ90WOCvH5_72H4qAKaoA==
+    body:
+      encoding: UTF-8
+      string: '{"page":2,"total_results":6,"total_pages":1,"results":[]}'
+  recorded_at: Wed, 26 Aug 2020 22:38:29 GMT
+recorded_with: VCR 6.0.0

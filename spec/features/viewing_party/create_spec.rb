@@ -3,6 +3,14 @@ require "rails_helper"
 RSpec.describe "Create Viewing Party Spec", :vcr, :new_episodes => true do
   describe "As an authenticated user" do
     before :each do
+      cassette = 'spec/fixtures/vcr_cassettes/New_Viewing_Party_Page.yml'
+      movie_details = File.read(cassette)
+      yaml = YAML.load(movie_details, symbolize_names: true)
+      json = yaml[:http_interactions][0][:response][:body][:string]
+      movie_params = JSON.parse(json, symbolize_names: true)
+      @movie = Movie.new(movie_params)
+
+
       @user1 = User.create!(oauth_id: "100000000000000000000", name: "John Smith", email: "john@example.com", access_token: "TOKEN", refresh_token: "REFRESH_TOKEN")
       @user2 = User.create!(oauth_id: "100000000000000000001", name: "Jane Doe", email: "jane@example.com", access_token: "TOKEN", refresh_token: "REFRESH_TOKEN")
       Friendship.create_reciprocal_for_ids(@user1.id, @user2.id)
