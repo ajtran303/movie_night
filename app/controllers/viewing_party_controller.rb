@@ -12,6 +12,6 @@ class ViewingPartyController < BaseController
 
   def viewing_party_params
     p = params.permit(:movie_title, :party_duration, :date, :time)
-    p.merge({user_id: current_user.id})
+    p.merge({ user_id: current_user.id })
   end
 end
