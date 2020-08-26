@@ -3,7 +3,7 @@ class SearchResults
     return nil if params.nil?
     return top_rated_movies if params == 'top rated'
 
-    find_movies_by_title(params)
+    find_movies_by_title(params) unless params.empty?
   end
 
   def self.find_movies_by_title(keyword)
