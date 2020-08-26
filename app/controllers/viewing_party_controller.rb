@@ -1,25 +1,27 @@
 class ViewingPartyController < BaseController
   def new
-    movie = SearchResults.movie_details(params[:movie_id])
-    viewing_party = ViewingParty.new
-    @form_params = {viewing_party: viewing_party, movie: movie}
+    @movie = SearchResults.movie_details(params[:movie_id])
   end
 
   def create
-    new_party = Party.create({
-      title: params[:title],
-      party_date: params[:party_date],
-      party_time: params[:party_time],
-      attendees: params[:friend_id].values,
-      user_id: current_user.id
-      }
-    )
-    if new_party.save
-      flash[:success] = "Your party for #{params[:title]} on #{params[:party_date]} at #{params[:party_time]} was created"
-      redirect_to dashboard_path
-      # post_to_calendar
-      CalendarService.create_viewing_party(new_party)
-    end
+    # date = params[:date] "2020-08-27"
+    # time = params[:time] "17:06"
+    # params[:movie_title] = ""
+    # params[:duration_of_party] = ""
+  #   new_party = Party.create({
+  #     title: params[:title],
+  #     party_date: params[:party_date],
+  #     party_time: params[:party_time],
+  #     attendees: params[:friend_id].values,
+  #     user_id: current_user.id
+  #     }
+  #   )
+  #   if new_party.save
+  #     flash[:success] = "Your party for #{params[:title]} on #{params[:party_date]} at #{params[:party_time]} was created"
+  #     redirect_to dashboard_path
+  #     # post_to_calendar
+  #     CalendarService.create_viewing_party(new_party)
+  #   end
   end
 end
 

@@ -7,5 +7,5 @@ Rails.application.routes.draw do
   resources :friendships, only: :create
   resources :discover, only: :index
   resources :movies, only: [:index, :show]
-  resources :viewing_party, only: :new
+  resources :viewing_party, only: [:new, :create]
 end

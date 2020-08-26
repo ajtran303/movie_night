@@ -18,31 +18,31 @@ RSpec.describe "Create Viewing Party Spec" do
     end
 
     describe "When I visit the movies details page" do
-      it "I can click the button to create a viewing party", :vcr do
+      it "I can click the link to create a viewing party", :vcr do
         visit("/movies/#{@movie.tmdb_id}")
-        click_button "Create A Viewing Party"
+        click_link "Create A Viewing Party"
         expect(current_path).to eq new_viewing_party_path
       end
     end
 
-    it "There is a form to create a viewing party", :vcr do
-      visit("/movies/#{@movie.tmdb_id}")
-      click_button "Create A Viewing Party"
-
-      within ".viewing-party-form" do
-        expect(page).to have_content(@movie.title)
-        expect(page).to have_content(@movie.runtime)
-
-        # When: as a date picker
-        # ???
-
-        # Checkboxes next to each friend (if user has friends)
-        # expect(page).to have_content(@user2.name)
-        # check @user2.name
-        # page.check "friend-css-selector" ??
-
-        expect(page).to have_button("Create Party")
-      end
-    end
+    # it "There is a form to create a viewing party", :vcr do
+    #   visit("/movies/#{@movie.tmdb_id}")
+    #   click_link "Create A Viewing Party"
+    #
+    #   within ".viewing-party-form" do
+    #     expect(page).to have_content(@movie.title)
+    #     expect(page).to have_content(@movie.runtime)
+    #
+    #     # When: as a date picker
+    #     # ???
+    #
+    #     # Checkboxes next to each friend (if user has friends)
+    #     # expect(page).to have_content(@user2.name)
+    #     # check @user2.name
+    #     # page.check "friend-css-selector" ??
+    #
+    #     expect(page).to have_link("Create Party")
+    #   end
+    # end
   end
 end
