@@ -5,10 +5,16 @@ class ViewingPartyController < BaseController
 
   def create
     party = Party.new(viewing_party_params)
-    party.save if party.valid?
+    create_party(party) if party.valid?
   end
 
   private
+
+  def create_party(event)
+    event.save
+    flash[:success] = "You've created a viewing party for #{params[:movie_title]}!"
+    redirect_to dashboard_index_path
+  end
 
   def viewing_party_params
     p = params.permit(:movie_title, :party_duration, :date, :time)
