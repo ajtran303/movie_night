@@ -1,15 +1,19 @@
 <h1>Create a Viewing Party</h1>
 
 <%= form_tag viewing_party_index_path, method: :post do %>
-  <%= tag.h3 @movie.title %>
+  <%= tag.h2 @movie.title %>
   <%= hidden_field_tag :movie_title, @movie.title %>
+
   <%= label_tag :duration_of_party %>
-  <%= text_field_tag :duration_of_party, @movie.runtime %>
+  <%= text_field_tag :duration_of_party, @movie.runtime %><br/>
+
   <label for="date">Choose a date for your party:</label>
-  <input type="date" id="date" name="date">
+  <input type="date" id="date" name="date"><br/>
 
   <label for="time">Choose a time for your party:</label>
-  <input type="time" id="time" name="time">
+  <input type="time" id="time" name="time"><br/>
+
+  <span>Include: </span><%= collection_check_boxes :invitees, :invitees_id, current_user.friends, :id, :name %><br/>
 
   <%= submit_tag "Create Party" %>
 <% end %>
