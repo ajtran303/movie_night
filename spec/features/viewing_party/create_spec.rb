@@ -51,6 +51,9 @@ RSpec.describe "Create Viewing Party Spec", :vcr, :new_episodes => true do
       end
 
       expect(Party.all.size).to eq(1)
+
+      expect(current_path).to eq(dashboard_index_path)
+      expect(page).to have_content("You've created a viewing party for #{@movie.title}!")
     end
   end
 end
