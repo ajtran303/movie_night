@@ -10,7 +10,12 @@
 
   <body>
     <main>
-      <%= tag.h1 "Welcome #{current_user.name}!" if current_user %>
+      <% if current_user.nil? %>
+        <%= button_to "Log in with Google", "/auth/google_oauth2" %>
+      <% else %>
+        <%= tag.h1 "Welcome #{current_user.name}!" %>
+        <%= link_to "Logout", '/sessions', method: :delete %>
+      <% end %>
       <% flash.each do |type, message| %>
         <%= tag.div message %>
       <% end %>
