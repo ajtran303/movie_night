@@ -1,3 +1,5 @@
 class DashboardController < BaseController
-  def index; end
+  def index
+    @parties = Party.all
+  end
 end
