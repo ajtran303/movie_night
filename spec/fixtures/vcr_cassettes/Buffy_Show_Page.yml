@@ -1,0 +1,113 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/movie/10206?api_key=SECRET_TMDB_API_KEY&append_to_response=credits,reviews
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Wed, 26 Aug 2020 22:05:11 GMT
+      Server:
+      - openresty
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, PUT, DELETE, OPTIONS
+      Access-Control-Expose-Headers:
+      - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
+        Content-Length, Content-Range
+      Cache-Control:
+      - public, max-age=21600
+      X-Memc:
+      - HIT
+      X-Memc-Key:
+      - 74abc40a6046f256f70854f24d356d08
+      X-Memc-Age:
+      - '2335'
+      X-Memc-Expires:
+      - '19265'
+      Etag:
+      - W/"9f63238798873e8c17b52ba74ee7aaf2"
+      Last-Modified:
+      - Wed, 26 Aug 2020 22:05:11 GMT
+      Vary:
+      - Accept-Encoding
+      X-Cache:
+      - Hit from cloudfront
+      Via:
+      - 1.1 ce4b35590464ed34415a13badd946ebb.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - DEN50-C2
+      X-Amz-Cf-Id:
+      - 1GN4-Ix5-jXd8NZI2BKn7bbeUTS0lB26ohbqlJ3EfmrBjGuGBMs5xg==
+      Age:
+      - '1279'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"adult":false,"backdrop_path":"/v9BNwCSm67p90O2BbukcsjDclP9.jpg","belongs_to_collection":null,"budget":7000000,"genres":[{"id":28,"name":"Action"},{"id":35,"name":"Comedy"},{"id":27,"name":"Horror"}],"homepage":"","id":10206,"imdb_id":"tt0103893","original_language":"en","original_title":"Buffy
+        the Vampire Slayer","overview":"Blonde, bouncy Buffy is your typical high
+        school cheerleader: her goal is to \"marry Christian Slater and die,\" and
+        nothing gets in her way when it''s time to shop! But all that changes when
+        a strange man informs her she''s been chosen by fate to kill vampires.  With
+        the help of a romantic rebel, Buffy is soon spending school nights protecting
+        L.A. from Lothos the Vampire King, his sidekick, Lefty, and their determined
+        gang of bloodsuckers. It''s everything you''d expect from a teen queen in
+        the Valley.","popularity":10.784,"poster_path":"/so4tTMItoq90wphs18lWbV0ASVV.jpg","production_companies":[{"id":23236,"logo_path":null,"name":"Sandollar","origin_country":""},{"id":2516,"logo_path":null,"name":"Kuzui
+        Enterprises","origin_country":"US"},{"id":25,"logo_path":"/qZCc1lty5FzX30aOCVRBLzaVmcp.png","name":"20th
+        Century Fox","origin_country":"US"}],"production_countries":[{"iso_3166_1":"US","name":"United
+        States of America"}],"release_date":"1992-07-24","revenue":16624456,"runtime":86,"spoken_languages":[{"iso_639_1":"en","name":"English"}],"status":"Released","tagline":"She
+        knows a sucker when she sees one.","title":"Buffy the Vampire Slayer","video":false,"vote_average":5.5,"vote_count":462,"credits":{"cast":[{"cast_id":1,"character":"Buffy
+        Summers","credit_id":"52fe43429251416c75009819","gender":1,"id":56128,"name":"Kristy
+        Swanson","order":0,"profile_path":"/8gPVElKDCBllmfIP0pjZL9zISKv.jpg"},{"cast_id":2,"character":"Merrick
+        Jamison-Smythe","credit_id":"52fe43429251416c7500981d","gender":2,"id":55636,"name":"Donald
+        Sutherland","order":1,"profile_path":"/pvk7fjJNg9kZQTeuG6ZlfJ8t2Ze.jpg"},{"cast_id":3,"character":"Amilyn","credit_id":"52fe43429251416c75009821","gender":2,"id":5129,"name":"Paul
+        Reubens","order":2,"profile_path":"/7T0ExonMf6PAvphKVaTm73BXdLW.jpg"},{"cast_id":4,"character":"Lothos","credit_id":"52fe43429251416c75009825","gender":2,"id":585,"name":"Rutger
+        Hauer","order":3,"profile_path":"/aNvyDYD0YscuwMfgy15wb5gRKph.jpg"},{"cast_id":5,"character":"Oliver
+        Pike","credit_id":"52fe43429251416c75009829","gender":2,"id":8395,"name":"Luke
+        Perry","order":4,"profile_path":"/1M1HIpOYeRpWGQBLwGlPcuHNKsk.jpg"},{"cast_id":6,"character":"Kimberly
+        Hannah","credit_id":"52fe43429251416c7500982d","gender":1,"id":448,"name":"Hilary
+        Swank","order":5,"profile_path":"/rYetl0tRJrF8oQNhu00n9Ku4PNr.jpg"},{"cast_id":13,"character":"Jennifer","credit_id":"52fe43429251416c75009855","gender":1,"id":77012,"name":"Michele
+        Abrams","order":6,"profile_path":"/akOY4jztDJnRz9ZpDQRYBuBVCmG.jpg"},{"cast_id":14,"character":"Benny","credit_id":"564e45659251414b010008d1","gender":2,"id":15234,"name":"David
+        Arquette","order":7,"profile_path":"/74wJjoywG7zCrNMWbRxwoyOj7Ub.jpg"},{"cast_id":15,"character":"Cassandra","credit_id":"564e4571c3a368070a00090f","gender":1,"id":3270,"name":"Natasha
+        Gregson Wagner","order":8,"profile_path":"/aGVYPI40CdFzxdE3fRnKvpeM8iw.jpg"},{"cast_id":16,"character":"Zeph","credit_id":"564e457dc3a368070d00091f","gender":2,"id":11155,"name":"Thomas
+        Jane","order":9,"profile_path":"/9frnlc2zoDcoeqZALB6aeYSQddl.jpg"},{"cast_id":17,"character":"Charlotte","credit_id":"564e458d9251414afd0008e6","gender":1,"id":70233,"name":"Ricki
+        Lake","order":10,"profile_path":"/lSMyrx9Znuy110ecuf37qDxJH2x.jpg"},{"cast_id":18,"character":"Basketball
+        Player","credit_id":"564e45959251414b07000afa","gender":2,"id":880,"name":"Ben
+        Affleck","order":11,"profile_path":"/8WE5VNhTkiyus0xqUWdL9wNyl0P.jpg"},{"cast_id":19,"character":"Gary
+        Murray","credit_id":"576c8c47c3a36830b80006d5","gender":2,"id":17401,"name":"Stephen
+        Root","order":12,"profile_path":"/jibbLPNtseUTMwlupwRTtQU1By1.jpg"},{"cast_id":20,"character":"Grueller","credit_id":"576c8c659251411519001799","gender":2,"id":58000,"name":"Sasha
+        Jenson","order":13,"profile_path":"/irUKK6cmb2WIjbt9wgRvGpT6dkg.jpg"},{"cast_id":21,"character":"Buffy''s
+        Mom","credit_id":"576c8c7ec3a3682f640006bd","gender":1,"id":12407,"name":"Candy
+        Clark","order":14,"profile_path":"/eDWbn53Q6vNECgOj68z8NymLv7D.jpg"},{"cast_id":22,"character":"Vampire
+        DJ","credit_id":"5b2ca1e19251413517001bf7","gender":1,"id":19578,"name":"Alexis
+        Arquette","order":15,"profile_path":"/jNRBwGKXOZFWLI2ceff1sMUdxcE.jpg"},{"cast_id":23,"character":"","credit_id":"5e9dabae371097001c49d9c4","gender":2,"id":13922,"name":"Seth
+        Green","order":16,"profile_path":"/l4No5Eu6j0U80hCIkaSn17AOWrj.jpg"}],"crew":[{"credit_id":"52fe43429251416c75009845","department":"Sound","gender":2,"id":1225,"job":"Original
+        Music Composer","name":"Carter Burwell","profile_path":null},{"credit_id":"52fe43429251416c7500983f","department":"Writing","gender":2,"id":12891,"job":"Screenplay","name":"Joss
+        Whedon","profile_path":"/mVvpZnKYKSCtkOQixQnOonV5kv3.jpg"},{"credit_id":"52fe43429251416c75009851","department":"Editing","gender":1,"id":17766,"job":"Editor","name":"Jill
+        Savitt","profile_path":null},{"credit_id":"52fe43429251416c75009839","department":"Production","gender":2,"id":47054,"job":"Producer","name":"Howard
+        Rosenman","profile_path":null},{"credit_id":"52fe43429251416c75009833","department":"Directing","gender":1,"id":64170,"job":"Director","name":"Fran
+        Rubel Kuzui","profile_path":"/6puK1iTlKTlE4Q1dbNZFcdoQJAG.jpg"},{"credit_id":"52fe43429251416c7500984b","department":"Camera","gender":2,"id":64171,"job":"Director
+        of Photography","name":"James Hayman","profile_path":null}]},"reviews":{"page":1,"results":[],"total_pages":0,"total_results":0}}'
+  recorded_at: Wed, 26 Aug 2020 22:26:30 GMT
+recorded_with: VCR 6.0.0

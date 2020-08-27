@@ -29,3 +29,14 @@ footer {
   align-self: baseline;
   flex-direction: row;
 }
+
+.party-container {
+  display: flex;
+}
+
+.party {
+  width: 200px;
+  margin-right: 75px;
+  border-color: blue;
+  border-style: solid;
+}

@@ -27,7 +27,7 @@ http_interactions:
       Connection:
       - keep-alive
       Date:
-      - Mon, 24 Aug 2020 22:26:20 GMT
+      - Wed, 26 Aug 2020 19:09:21 GMT
       Server:
       - openresty
       Access-Control-Allow-Origin:
@@ -44,25 +44,25 @@ http_interactions:
       X-Memc-Key:
       - 8064efce63b52d0889d69a823f040eb4
       X-Memc-Age:
-      - '16636'
+      - '14011'
       X-Memc-Expires:
-      - '4964'
+      - '7589'
       Etag:
-      - W/"f94d8a1268d72cd3a54536d1ad64e793"
+      - W/"1943739ce57d0a52f4ca5b245312ee37"
       Last-Modified:
-      - Mon, 24 Aug 2020 22:26:20 GMT
+      - Wed, 26 Aug 2020 19:09:21 GMT
       Vary:
       - Accept-Encoding
       X-Cache:
       - Hit from cloudfront
       Via:
-      - 1.1 48a6ccbb0ddb052ab512a3422295bd39.cloudfront.net (CloudFront)
+      - 1.1 23241b9c368643949e3bb1a1ba4e97c3.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
       - DEN50-C2
       X-Amz-Cf-Id:
-      - x36cfqhoLwwXnFGAEnl3su3eUu7IQm8OxmiZJpviMdkcp-V6nGLo4g==
+      - GyJy0EBl5MDfKDa0t5jXfx3Ad-aeDTb9g3kpKEGZrgttEDf3-b-TPA==
       Age:
-      - '13725'
+      - '1179'
     body:
       encoding: ASCII-8BIT
       string: '{"adult":false,"backdrop_path":"/jtAI6OJIWLWiRItNSZoWjrsUtmi.jpg","belongs_to_collection":{"id":729322,"name":"Gabriel''s
@@ -71,8 +71,8 @@ http_interactions:
         truth about Julia Mitchell''s identity, but his realization comes a moment
         too late. Julia is done waiting for the well-respected Dante specialist to
         remember her and wants nothing more to do with him. Can Gabriel win back her
-        heart before she finds love in another''s arms?","popularity":14.708,"poster_path":"/pci1ArYW7oJ2eyTo2NMYEKHHiCP.jpg","production_companies":[{"id":92153,"logo_path":"/psjvYkjjgAPtS8utnFYDM8t8yi7.png","name":"PassionFlix","origin_country":"US"}],"production_countries":[],"release_date":"2020-07-31","revenue":0,"runtime":0,"spoken_languages":[{"iso_639_1":"en","name":"English"}],"status":"Released","tagline":"","title":"Gabriel''s
-        Inferno Part II","video":false,"vote_average":9.1,"vote_count":689,"credits":{"cast":[{"cast_id":1,"character":"Julia
+        heart before she finds love in another''s arms?","popularity":17.773,"poster_path":"/pci1ArYW7oJ2eyTo2NMYEKHHiCP.jpg","production_companies":[{"id":92153,"logo_path":"/psjvYkjjgAPtS8utnFYDM8t8yi7.png","name":"PassionFlix","origin_country":"US"}],"production_countries":[],"release_date":"2020-07-31","revenue":0,"runtime":0,"spoken_languages":[{"iso_639_1":"en","name":"English"}],"status":"Released","tagline":"","title":"Gabriel''s
+        Inferno Part II","video":false,"vote_average":9.1,"vote_count":700,"credits":{"cast":[{"cast_id":1,"character":"Julia
         Mitchell","credit_id":"5f25dbe72d8ef30035d4c8d8","gender":1,"id":1312450,"name":"Melanie
         Zanetti","order":1,"profile_path":"/2JNL4WR2eloqpoYxZPOe54gE4aG.jpg"},{"cast_id":2,"character":"Gabriel
         Emerson","credit_id":"5f25dbff0231f200381c6aca","gender":2,"id":544002,"name":"Giulio
@@ -97,5 +97,5 @@ http_interactions:
         Goodspeed","profile_path":null},{"credit_id":"5f25dfb47c6de300351c5dfa","department":"Production","gender":0,"id":1845009,"job":"Producer","name":"Michael
         Buttiglieri","profile_path":null},{"credit_id":"5f275793869e750036680f1f","department":"Writing","gender":0,"id":2693030,"job":"Novel","name":"Sylvain
         Reynard","profile_path":null}]},"reviews":{"page":1,"results":[],"total_pages":0,"total_results":0}}'
-  recorded_at: Tue, 25 Aug 2020 02:15:05 GMT
+  recorded_at: Wed, 26 Aug 2020 19:29:00 GMT
 recorded_with: VCR 6.0.0
