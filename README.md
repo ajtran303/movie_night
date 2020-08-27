@@ -1,4 +1,4 @@
-# Viewing Party
+# Viewing Party / Movie Night
 
 [Viewing Party production site](https://peaceful-journey-75998.herokuapp.com/)
 
