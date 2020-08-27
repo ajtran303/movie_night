@@ -21,6 +21,7 @@ RSpec.describe "Dashboard Page Viewing Party Section Spec" do
           expect(page).to have_content(party.movie_title)
           expect(page).to have_content(party.date)
           expect(page).to have_content(party.time)
+          expect(page).to have_button("Add to Calendar")
         end
       end
     end
