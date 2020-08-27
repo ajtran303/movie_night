@@ -22,4 +22,14 @@
 
 <section class="viewing-party">
   <h1>Viewing Parties</h1>
+  <div class="party-container">
+    <% @parties.each do |party| %>
+      <div class="party" id="party-<%= party.id %>">
+        <%= tag.p "Movie: #{party.movie_title}" %>
+        <%= tag.p "Date: #{party.date}" %>
+        <%= tag.p "Time: #{party.time}" %>
+        <%= button_to "Add to Calendar" unless current_user.parties.include?(party) %>
+      </div>
+    <% end %>
+  </div>
 </section>
