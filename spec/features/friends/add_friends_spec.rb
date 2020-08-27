@@ -2,9 +2,9 @@ require "rails_helper"
 RSpec.describe "User Dashboard Page" do
   describe "As an authenticated User" do
     before :each do
-      @user_1 = User.create!(oauth_id: "100000000000000000000", name: "John Smith", email: "john@example.com")
-      @user_2 = User.create!(oauth_id: "100000000000000000001", name: "Jane Doe", email: "jane@example.com")
-      @user_3 = User.create!(oauth_id: "100000000000000000002", name: "Sam Smith", email: "sam@example.com")
+      @user_1 = User.create!(oauth_id: "100000000000000000000", name: "John Smith", email: "john@example.com", access_token: "TOKEN", refresh_token: "REFRESH_TOKEN")
+      @user_2 = User.create!(oauth_id: "100000000000000000001", name: "Jane Doe", email: "jane@example.com", access_token: "TOKEN", refresh_token: "REFRESH_TOKEN")
+      @user_3 = User.create!(oauth_id: "100000000000000000002", name: "Sam Smith", email: "sam@example.com", access_token: "TOKEN", refresh_token: "REFRESH_TOKEN")
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user_1)
     end
 

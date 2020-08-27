@@ -13,8 +13,8 @@ RSpec.describe Friendship, type: :model do
 
   describe 'methods' do
     before :each do
-      @user_1 = User.create!(oauth_id: "100000000000000000000", name: "John Smith", email: "john@example.com")
-      @user_2 = User.create!(oauth_id: "100000000000000000001", name: "Jane Doe", email: "jane@example.com")
+      @user_1 = User.create!(oauth_id: "100000000000000000000", name: "John Smith", email: "john@example.com", access_token: "TOKEN", refresh_token: "REFRESH_TOKEN")
+      @user_2 = User.create!(oauth_id: "100000000000000000001", name: "Jane Doe", email: "jane@example.com", access_token: "TOKEN", refresh_token: "REFRESH_TOKEN")
     end
 
     it "#create_reciprocal_for_ids" do
