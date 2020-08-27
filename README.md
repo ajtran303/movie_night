@@ -1,6 +1,5 @@
 # Viewing Party / Movie Night
-
-[Viewing Party production site](https://peaceful-journey-75998.herokuapp.com/)
+<!-- [Viewing Party production site](https://peaceful-journey-75998.herokuapp.com/) -->
 
 Developers: [Kathy Bui](http://github.com/kathybui732) and [AJ Tran](http://github.com/ajtran303/)
 
@@ -12,7 +11,11 @@ Viewing party is an application in which users can explore movie options and cre
 
 ## Usage and Features
 
-Visit the [production site](https://peaceful-journey-75998.herokuapp.com/) to use Viewing Party and its features.
+<!-- Visit the [production site](https://peaceful-journey-75998.herokuapp.com/) to use Viewing Party and its features. -->
+
+### Known issues
+
+The production site is down. [Screenshots of the functionality can be found here.](https://github.com/Kathybui732/viewing_party/issues/53)
 
 Currently, you can log in with your Google Account. We use `OAuth` to delegate authentication to a third party.
 
@@ -21,10 +24,6 @@ Once logged in, you are ready to `Discover Movies.` You can either find out the 
 On the movie search results index page, you can click any movie title to go to a page to see more details for that specific movie.
 
 Back on the dashboard (where you were after logging in), you can add friends. Search for your friend by email address! If your friend's email address is registered, then you will have added them as a friend! Friendships are reciprocal -- which means that you don't need to wait for them to "accept" your request -- the both of you just become friends!
-
-### Known issues
-
-The production site is down. [Screenshots of the functionality can be found here.](https://github.com/Kathybui732/viewing_party/issues/53)
 
 ### Features in progress
 
