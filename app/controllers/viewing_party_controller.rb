@@ -10,8 +10,16 @@ class ViewingPartyController < BaseController
 
   private
 
+  def invite_friends(party)
+    friends_ids = params[:invitees][:invitees_id][1..-1]
+    friends_ids.each do |friend_id|
+      PartyInvitee.create!(party_id: party.id, invitee_id: friend_id.to_i)
+    end
+  end
+
   def create_party(event)
     event.save
+    invite_friends(event)
     flash[:success] = "You've created a viewing party for #{params[:movie_title]}!"
     redirect_to dashboard_index_path
   end
