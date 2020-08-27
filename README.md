@@ -22,6 +22,10 @@ On the movie search results index page, you can click any movie title to go to a
 
 Back on the dashboard (where you were after logging in), you can add friends. Search for your friend by email address! If your friend's email address is registered, then you will have added them as a friend! Friendships are reciprocal -- which means that you don't need to wait for them to "accept" your request -- the both of you just become friends!
 
+### Known issues
+
+The production site is down. [Screenshots of the functionality can be found here.](https://github.com/Kathybui732/viewing_party/issues/53)
+
 ### Features in progress
 
 Coming soon: you will be able to "Create a Viewing Party," which will automatically add an event to your Google Calendar with a movie's information and friends that you have added and invited.
