@@ -11,11 +11,9 @@ Viewing party is an application in which users can explore movie options and cre
 
 ## Usage and Features
 
-<!-- Visit the [production site](https://peaceful-journey-75998.herokuapp.com/) to use Viewing Party and its features. -->
+Visit the [production site](https://calm-refuge-16149.herokuapp.com/) to use Viewing Party and its features.
 
-### Known issues
-
-The production site is down. [Screenshots of the functionality can be found here.](https://github.com/Kathybui732/viewing_party/issues/53)
+[Screenshots of the functionality can be found here.](https://github.com/Kathybui732/viewing_party/issues/53)
 
 Currently, you can log in with your Google Account. We use `OAuth` to delegate authentication to a third party.
 
